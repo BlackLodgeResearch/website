@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+
+# Misc
+/public
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Visual Studio Code
+/.vscode
+.history
+
+# Generated keys. Never commit these!
+gh-pages
+gh-pages.pub

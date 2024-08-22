@@ -1,0 +1,31 @@
+{
+  "name": "blr",
+  "version": "1.0.0",
+  "description": "Static website generator for generating the BLR website.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:eleventy": "eleventy --serve",
+    "start": "cross-env ELEVENTY_ENV=development DEBUG=\"Eleventy*\" npm run watch:eleventy",
+    "build": "npm run build:eleventy",
+    "build:eleventy": "cross-env ELEVENTY_ENV=development eleventy",
+    "build:eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
+    "build:prod": "npm run build:eleventy:prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-attrs": "^4.2.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "node-html-parser": "^6.1.13"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

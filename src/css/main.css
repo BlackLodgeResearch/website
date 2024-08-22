@@ -1,0 +1,206 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: system, "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(180, 180, 180);
+    padding: 3em;
+    display: block;
+    height: 100vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 16px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+div {
+    display: block;
+}
+
+.pagecontainer {
+    width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.pagecontainer > header {
+    height: 64px;
+}
+
+@media screen and (min-width:768px) {
+    .pagecontainer {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+}
+
+.maincontent {
+    overflow: hidden;
+}
+
+@media screen and (min-width:768px) {
+    header {
+        font-size: 48px; /* for desktop */
+    }
+}
+  
+pre {
+  overflow: auto;
+}
+  
+code {
+    overflow: scroll;
+}
+
+.headerNav {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    z-index: 2;
+    width: 100%;
+    overflow: visible;
+}
+
+.navHeader {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    float: right;
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+ul.navHeader li {
+    float: left;
+    padding: 2px 0px;
+    margin-left: 12px;
+    margin-bottom: 0px;
+    color: #999;
+    font-size: 13px;
+    margin-top: 0px;
+}
+
+a, a:visited, a:active {
+    color: #600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #999999;
+}
+
+.spacer {
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+.logo {
+    color: #999;
+    font-size: 32px;
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-top: 8px;
+    cursor: pointer;
+    left: 0px;
+    z-index: 10;
+    width: auto;
+    float: left;
+    position: relative;
+}
+
+.headerArea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    padding-top: 12px;
+    border-top: 1px solid #333;
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+}
+
+.headerAreaInside {
+    margin-right: 12px;
+}
+
+footer {
+    padding-top: 24px;
+    clear: both;
+    padding-bottom: 16px;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+footer address {
+    float: right;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.centralBlock {
+    float: left;
+    width: 23%;
+    overflow: hidden;
+}
+
+.centralLeft {
+    background: url(/themes/blr/images/nav_sidebar_left_bg.gif) repeat-y center !important;
+}
+
+.bodyContent {
+    padding-left: 68px !important;
+    padding-right: 0px !important;
+    float: right;
+    width: 67%
+}
