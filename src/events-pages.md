@@ -5,8 +5,7 @@ pagination:
   alias: event
 permalink: "events/{{ event.name | slug }}/"
 layout: index
-title: Events
----
+title: "Event: {{ event.name }}"
 ---
 
 {{ event.name }} - {{ event.date }}
