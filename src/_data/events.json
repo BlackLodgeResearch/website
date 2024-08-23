@@ -4,5 +4,12 @@
         "date": "every Thursday from 7pm to close",
         "location": "Black Lodge Research",
         "description": "We're going to be doing open hack nights at Black Lodge Research. We'll be working on a variety of projects, and we'll be sharing our progress with the community. We'll be doing this for free, so please bring your own food and drinks. If you'd like to join us, please let us know."
+    },
+    {
+        "name": "Test Event",
+        "date": "every Tuesday from 7am to 9am",
+        "location": "Black Lodge Research",
+        "description": "Breakfast!",
+        "potatoes": true
     }
 ]

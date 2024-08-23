@@ -5,7 +5,6 @@ const markdownItSup = require('markdown-it-sup');
 const markdownItSub = require('markdown-it-sub');
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const anchor = require("markdown-it-anchor");
-const { parse } = require("node-html-parser");
 
 const markdownItOptions = {
     html: true,
@@ -35,7 +34,8 @@ module.exports = function (eleventyConfig) {
         pathPrefix: "/website",
         dir: {
             input: 'src',
-            output: 'public',
+            includes: "_includes",
+            layouts: "_layouts",
             data: "_data",
             output: "_site",
         },
