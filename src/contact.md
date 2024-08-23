@@ -7,8 +7,8 @@ Feel free to stop by any time we have an event on the calendar or get ahold of u
 
 If you come by, do not park in the spaces directly in front of businesses. These are reserved specifically for those businesses 24/7/365. You will find ample parking at the end of each row of buildings.
 
-![BLR Facebook Group](images/facebook-logo.png)
-![BLR Twitter Feed](images/twitter-logo.png)
+[![BLR Facebook Group](/images/facebook-logo.png)](https://www.facebook.com/BlackLodgeResearch)
+[![BLR Twitter Feed](/images/twitter-logo.png)](https://twitter.com/the_black_lodge)
 
 To join the mailing list, sign up here http://lists.dc206.org/listinfo.cgi/list-dc206.org.
 

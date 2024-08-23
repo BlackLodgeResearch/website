@@ -62,7 +62,6 @@ div {
 }
 
 .pagecontainer .header {
-    height: 200px;
     border-bottom: 2px solid #555;
     grid-area: header;
 }
@@ -70,6 +69,7 @@ div {
 .hero {
     grid-area: logo;
     font-size: 40px; 
+    font-weight: 700;
     border-bottom: 2px solid #555;
 }
 
@@ -81,6 +81,8 @@ div {
     float: left;
     padding: 1em;
     grid-area: left;;
+    align-content: center;
+    text-align: center;
 }
   
 .right {
@@ -98,6 +100,12 @@ code {
     overflow: scroll;
 }
 
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    align-content: flex-end;
+}
 nav ul {
     list-style-type: none;
     float: right;
