@@ -1,0 +1,136 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: system, "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(180, 180, 180);
+    padding: 3em;
+    display: block;
+    height: 100vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    color: #555
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 16px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+div {
+    display: block;
+}
+
+.pagecontainer {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'left right right right'
+      'footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.pagecontainer .header {
+    height: 200px;
+    border-bottom: 2px solid #555;
+    grid-area: header;
+}
+
+.maincontent {
+    overflow: hidden;
+}
+  
+.left {
+    float: left;
+    padding: 1em;
+    grid-area: left;;
+}
+  
+.right {
+    padding: 1em;
+    float: left;
+    border-left: 2px solid #555;
+    grid-area: right;
+}
+  
+pre {
+  overflow: auto;
+}
+  
+code {
+    overflow: scroll;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: block;
+    float: left;
+}
+
+nav ul li :is(a, a:hover, a:visited, a:active) {
+    text-align: center;
+    padding: 10px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #B22222;
+    cursor: pointer;
+}
+
+footer {
+    border-top: 2px solid #555;
+    padding-top: 24px;
+    clear: both;
+    padding-bottom: 16px;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    grid-area: footer;
+}
+
+footer address {
+    text-align: right;
+    float: right;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+}
