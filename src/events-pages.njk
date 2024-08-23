@@ -1,0 +1,16 @@
+---
+pagination:
+  data: events
+  size: 1
+  alias: event
+permalink: "events/{{ event.name | slug }}/"
+layout: index
+title: Events
+---
+---
+
+{{ event.name }} - {{ event.date }}
+
+{{ event.description }}
+
+Event will be held at {{ event.location }}.

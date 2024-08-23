@@ -27,6 +27,7 @@ input, button, textarea, select {
 }
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    color: #555
 }
 #root, #__next {
     isolation: isolate;
@@ -51,30 +52,37 @@ div {
 }
 
 .pagecontainer {
-    width: 800px;
-    margin: auto;
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'left right right right'
+      'footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
     text-align: left;
 }
 
-.pagecontainer > header {
-    height: 64px;
-}
-
-@media screen and (min-width:768px) {
-    .pagecontainer {
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-    }
+.pagecontainer .header {
+    height: 200px;
+    border-bottom: 2px solid #555;
+    grid-area: header;
 }
 
 .maincontent {
     overflow: hidden;
 }
-
-@media screen and (min-width:768px) {
-    header {
-        font-size: 48px; /* for desktop */
-    }
+  
+.left {
+    float: left;
+    padding: 1em;
+    grid-area: left;;
+}
+  
+.right {
+    padding: 1em;
+    float: left;
+    border-left: 2px solid #555;
+    grid-area: right;
 }
   
 pre {
@@ -85,122 +93,44 @@ code {
     overflow: scroll;
 }
 
-.headerNav {
-    position: absolute;
-    top: 14px;
-    right: 0px;
-    z-index: 2;
-    width: 100%;
-    overflow: visible;
-}
-
-.navHeader {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
+nav ul {
+    list-style-type: none;
     float: right;
 }
 
-ul {
+nav ul li {
+    list-style-type: none;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-ul.navHeader li {
     float: left;
-    padding: 2px 0px;
-    margin-left: 12px;
-    margin-bottom: 0px;
-    color: #999;
-    font-size: 13px;
-    margin-top: 0px;
 }
 
-a, a:visited, a:active {
-    color: #600;
-    text-decoration: none;
-    letter-spacing: 1px;
+nav ul li a, a:hover, nav ul li a:visited, nav ul li a:active {
+    text-align: center;
+    padding: 10px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #B22222;
     cursor: pointer;
-}
-
-a:hover{
-    color: #999999;
-}
-
-.spacer {
-    clear: both;
-    font-size: 1px;
-    line-height: 1px;
-}
-
-.logo {
-    color: #999;
-    font-size: 32px;
-    margin-bottom: 0px;
-    padding: 0px;
-    margin-top: 8px;
-    cursor: pointer;
-    left: 0px;
-    z-index: 10;
-    width: auto;
-    float: left;
-    position: relative;
-}
-
-.headerArea {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.divider {
-    padding-top: 12px;
-    border-top: 1px solid #333;
-    overflow: hidden;
-    clear: both;
-    width: 100%;
-}
-
-.headerAreaInside {
-    margin-right: 12px;
 }
 
 footer {
+    border-top: 2px solid #555;
     padding-top: 24px;
     clear: both;
     padding-bottom: 16px;
     color: #555;
     font-size: 10px;
     letter-spacing: 1.5px;
+    grid-area: footer;
 }
 
 footer address {
+    text-align: right;
     float: right;
     font-style: italic;
 }
 
 footer a {
     text-decoration: none;
-}
-
-.centralBlock {
-    float: left;
-    width: 23%;
-    overflow: hidden;
-}
-
-.centralLeft {
-    background: url(/themes/blr/images/nav_sidebar_left_bg.gif) repeat-y center !important;
-}
-
-.bodyContent {
-    padding-left: 68px !important;
-    padding-right: 0px !important;
-    float: right;
-    width: 67%
 }
