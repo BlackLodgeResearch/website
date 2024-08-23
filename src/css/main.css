@@ -54,7 +54,7 @@ div {
 .pagecontainer {
     display: grid;
     grid-template-areas:
-      'header header header header'
+      'logo header header header'
       'left right right right'
       'footer footer footer footer';
     gap: 10px;
@@ -66,6 +66,12 @@ div {
     height: 200px;
     border-bottom: 2px solid #555;
     grid-area: header;
+}
+
+.hero {
+    grid-area: logo;
+    font-size: 40px; 
+    border-bottom: 2px solid #555;
 }
 
 .maincontent {
