@@ -1,0 +1,17 @@
+---
+pagination:
+  data: events
+  size: 1
+  alias: event
+permalink: "events/{{ event.name | slug }}-{{ event.date | slug }}/"
+layout: index
+eleventyComputed:
+  title: "Event: {{ event.name }}"
+---
+
+<h2>{{ event.name }}</h2>
+<div>{{ "Every " if event.recurring }}{{ event.date }} </div>
+
+<p>{{ event.description }}</p>
+
+<p>Event will be held at {{ event.location }}.</p>
