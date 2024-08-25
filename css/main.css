@@ -57,6 +57,7 @@ div {
       'logo logo header header header'
       'left right right right right'
       'footer footer footer footer footer';
+    grid-template-columns: 280px repeat(4, 1fr); 
     padding: 10px;
     text-align: left;
 }
