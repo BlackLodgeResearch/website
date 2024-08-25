@@ -27,3 +27,9 @@ The events are a JSON list, with name, date, location and description. Just add 
 
 ## How does the GitHub Pages deployment work?
 The `.github/workflows/build-and-deploy.yml` contains a workflow that install Node.js, installs eleventy, and then builds the website. The results are checked in to the `gh-pages` branch of the repository, and another Pages workflow deploys that branch to the URL.
+
+## How do I test locally?
+Install Node.js and npm. Clone the repository. Run `npm install` in the repo to get the modules.
+Run `npm run watch:eleventy` and go to the localhost URL it gives you. It'll cue the browser to refresh the page when it spots changes hitting the disk.
+When you're done, push to `main`, and let Github Pages publish for you.
+
