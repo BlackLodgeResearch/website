@@ -1,35 +1,11 @@
-# Non-published docs
+# Non-publish docs
 
-This is the directory for info about what this is, how it works and how to poke the website.
+This is the website generator for Black Lodge Research. It's a Next.js app with a static build, because there's
+no server side code that needs to run to interact with the user.
 
-## What is it?
-It's a static website generator that takes Markdown, data files, and templates, and generates a static website. This website gets checed in to the `gh-pages` branch of the repository, and is then served by GitHub Pages.
+## How to edit content:
+Events live under `src/content/events` and must be named uniquely. Use the existing ones as examples.
+News live under `src/content/news`, and follow the same guidelines.
 
-## How does it work?
-The website is built by software called eleventy. It's Javascript, based on Node.js.
-
-## How do I edit the content?
-Edit the markdown files in the `src` directory. For styling, edit the `src/css/main.css` file. Images live in `src/images`.
-
-## What is the file content?
-Mostly, it's Markdown, as understood by [Markdown-it](https://markdown-it.github.io/). The data files are JSON, and the templates are Nunjucks.
-The Markdown files also have Front Matter, which is a way of adding metadata to a file, are these blocks at the top of the file:
-```
----
-title: This ends up in the title metadata
-layout: The name of the template to use
-permalink: /permalink/
----
-```
-The permalink is used to give a static URL to the page. If you don't specify one, it will be generated from the title.
-
-The events are a JSON list, with name, date, location and description. Just add them. The URLs are generated from the name and date.
-
-## How does the GitHub Pages deployment work?
-The `.github/workflows/build-and-deploy.yml` contains a workflow that install Node.js, installs eleventy, and then builds the website. The results are checked in to the `gh-pages` branch of the repository, and another Pages workflow deploys that branch to the URL.
-
-## How do I test locally?
-Install Node.js and npm. Clone the repository. Run `npm install` in the repo to get the modules.
-Run `npm run watch:eleventy` and go to the localhost URL it gives you. It'll cue the browser to refresh the page when it spots changes hitting the disk.
-When you're done, push to `main`, and let Github Pages publish for you.
-
+## How this was built.
+Mostly vibe-coded on the bolt.new website, and then checked by hand to ensure consistency and functionality, and fixing bugs.
