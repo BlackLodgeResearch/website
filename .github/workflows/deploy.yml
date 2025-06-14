@@ -1,4 +1,4 @@
-name: Deploy Next.jssite to GitHub Pages
+name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
@@ -19,6 +19,9 @@ concurrency:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./src
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
